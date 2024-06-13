@@ -1,0 +1,6 @@
+﻿  MyForm.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Gerando Código...
+  MyForm.obj : Módulo MSIL encontrado; vínculo incremental está desabilitado para MSIL; executando link completo
+LINK : error LNK2001: símbolo externo não resolvido main
+C:\Users\augus\source\repos\calculator\x64\Debug\calculator.exe : fatal error LNK1120: 1 externo não resolvidos
