@@ -97,10 +97,10 @@ namespace calculator {
 		System::ComponentModel::Container ^components;
 
 	private:
-		int num1;
-		int num2;
-		int operacao;
-		   int resultado;
+		float num1;
+		float num2;
+		float operacao;
+		   float resultado;
 
 	private: System::Windows::Forms::Button^ button_clear;
 	
@@ -463,7 +463,8 @@ private: System::Void button_mais_Click(System::Object^ sender, System::EventArg
 	if (this->label_resultado->Text == "") {
 		return;
 	}
-	this->num1 = Convert::ToInt32(this->label_resultado->Text);
+
+	this->num1 = Convert::ToDouble(this->label_resultado->Text);
 	this->label_resultado->Text = "";
 	this->operacao = 1;
 }
@@ -471,7 +472,7 @@ private: System::Void button_menos_Click(System::Object^ sender, System::EventAr
 	if (this->label_resultado->Text == "") {
 		return;
 	}
-	this->num1 = Convert::ToInt32(this->label_resultado->Text);
+	this->num1 = Convert::ToDouble(this->label_resultado->Text);
 	this->label_resultado->Text = "";
 	this->operacao = 2;
 }
@@ -479,7 +480,7 @@ private: System::Void button_div_Click(System::Object^ sender, System::EventArgs
 	if (this->label_resultado->Text == "") {
 		return;
 	}
-	this->num1 = Convert::ToInt32(this->label_resultado->Text);
+	this->num1 = Convert::ToDouble(this->label_resultado->Text);
 	this->label_resultado->Text = "";
 	this->operacao = 3;
 }
@@ -487,7 +488,7 @@ private: System::Void button_mult_Click(System::Object^ sender, System::EventArg
 	if (this->label_resultado->Text == "") {
 		return;
 	}
-	this->num1 = Convert::ToInt32(this->label_resultado->Text);
+	this->num1 = Convert::ToDouble(this->label_resultado->Text);
 	this->label_resultado->Text = "";
 	this->operacao = 4;
 }
@@ -495,25 +496,23 @@ private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ 
 	if (this->label_resultado->Text == "") {
 		return;
 	}
-	this->num2 = Convert::ToInt32(this->label_resultado->Text);
+	this->num2 = Convert::ToDouble(this->label_resultado->Text);
 	if (this->num2 == 0 && this->operacao == 3) {
 		this->label_resultado->Text = "";
 		this->num1 = 0;
 		return;
 	}
-	switch (this->operacao) {
-	case 1:
+	if (this->operacao == 1) {
 		this->resultado = this->num1 + this->num2;
-		break;
-	case 2:
+	}
+	else if (this->operacao == 2) {
 		this->resultado = this->num1 - this->num2;
-		break;
-	case 3:
+	}
+	else if (this->operacao == 3) {
 		this->resultado = this->num1 / this->num2;
-		break;
-	case 4:
+	}
+	else if (this->operacao == 4) {
 		this->resultado = this->num1 * this->num2;
-		break;
 	}
 	this->num1 = 0;
 	this->num2 = 0;
