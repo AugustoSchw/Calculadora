@@ -1,4 +1,4 @@
-#pragma once
+Ôªø#pragma once
 
 namespace calculator {
 
@@ -10,7 +10,7 @@ namespace calculator {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Sum·rio para MyForm
+	/// Sum√°rio para MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -22,7 +22,7 @@ namespace calculator {
 
 	protected:
 		/// <summary>
-		/// Limpar os recursos que est„o sendo usados.
+		/// Limpar os recursos que est√£o sendo usados.
 		/// </summary>
 		~MyForm()
 		{
@@ -82,6 +82,7 @@ namespace calculator {
 	private: System::Windows::Forms::Button^ button_num_8;
 
 	private: System::Windows::Forms::Button^ button_num_7;
+	private: System::ComponentModel::IContainer^ components;
 
 
 
@@ -92,23 +93,27 @@ namespace calculator {
 
 	private:
 		/// <summary>
-		/// Vari·vel de designer necess·ria.
+		/// Vari√°vel de designer necess√°ria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 	private:
 		float num1;
 		float num2;
-		float operacao;
+		int operacao;
 		   float resultado;
+	private: System::Windows::Forms::Button^ button_ponto;
+	private: System::Windows::Forms::Button^ button1;
+
+
 
 	private: System::Windows::Forms::Button^ button_clear;
 	
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// MÈtodo necess·rio para suporte ao Designer - n„o modifique 
-		/// o conte˙do deste mÈtodo com o editor de cÛdigo.
+		/// M√©todo necess√°rio para suporte ao Designer - n√£o modifique 
+		/// o conte√∫do deste m√©todo com o editor de c√≥digo.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -129,6 +134,8 @@ namespace calculator {
 			this->button_num_8 = (gcnew System::Windows::Forms::Button());
 			this->button_num_7 = (gcnew System::Windows::Forms::Button());
 			this->button_clear = (gcnew System::Windows::Forms::Button());
+			this->button_ponto = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button_num_1
@@ -136,7 +143,7 @@ namespace calculator {
 			this->button_num_1->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_num_1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_num_1->Location = System::Drawing::Point(13, 123);
+			this->button_num_1->Location = System::Drawing::Point(13, 136);
 			this->button_num_1->Margin = System::Windows::Forms::Padding(4);
 			this->button_num_1->Name = L"button_num_1";
 			this->button_num_1->Size = System::Drawing::Size(82, 62);
@@ -151,10 +158,10 @@ namespace calculator {
 			this->button_num_0->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_num_0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_num_0->Location = System::Drawing::Point(13, 333);
+			this->button_num_0->Location = System::Drawing::Point(13, 346);
 			this->button_num_0->Margin = System::Windows::Forms::Padding(4);
 			this->button_num_0->Name = L"button_num_0";
-			this->button_num_0->Size = System::Drawing::Size(262, 50);
+			this->button_num_0->Size = System::Drawing::Size(186, 50);
 			this->button_num_0->TabIndex = 9;
 			this->button_num_0->Text = L"0";
 			this->button_num_0->UseCompatibleTextRendering = true;
@@ -168,10 +175,10 @@ namespace calculator {
 			this->label_resultado->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label_resultado->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label_resultado->Location = System::Drawing::Point(12, 33);
-			this->label_resultado->MinimumSize = System::Drawing::Size(260, 65);
+			this->label_resultado->Location = System::Drawing::Point(13, 37);
+			this->label_resultado->MinimumSize = System::Drawing::Size(262, 75);
 			this->label_resultado->Name = L"label_resultado";
-			this->label_resultado->Size = System::Drawing::Size(260, 65);
+			this->label_resultado->Size = System::Drawing::Size(262, 75);
 			this->label_resultado->TabIndex = 18;
 			this->label_resultado->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
@@ -180,7 +187,7 @@ namespace calculator {
 			this->button_menos->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_menos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_menos->Location = System::Drawing::Point(339, 124);
+			this->button_menos->Location = System::Drawing::Point(339, 136);
 			this->button_menos->Margin = System::Windows::Forms::Padding(4);
 			this->button_menos->Name = L"button_menos";
 			this->button_menos->Size = System::Drawing::Size(48, 48);
@@ -195,7 +202,7 @@ namespace calculator {
 			this->button_enter->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_enter->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_enter->Location = System::Drawing::Point(283, 237);
+			this->button_enter->Location = System::Drawing::Point(283, 249);
 			this->button_enter->Margin = System::Windows::Forms::Padding(4);
 			this->button_enter->Name = L"button_enter";
 			this->button_enter->Size = System::Drawing::Size(104, 146);
@@ -209,7 +216,7 @@ namespace calculator {
 			this->button_mais->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_mais->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_mais->Location = System::Drawing::Point(283, 124);
+			this->button_mais->Location = System::Drawing::Point(283, 136);
 			this->button_mais->Margin = System::Windows::Forms::Padding(4);
 			this->button_mais->Name = L"button_mais";
 			this->button_mais->Size = System::Drawing::Size(48, 48);
@@ -224,7 +231,7 @@ namespace calculator {
 			this->button_div->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_div->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_div->Location = System::Drawing::Point(283, 180);
+			this->button_div->Location = System::Drawing::Point(283, 192);
 			this->button_div->Margin = System::Windows::Forms::Padding(4);
 			this->button_div->Name = L"button_div";
 			this->button_div->Size = System::Drawing::Size(48, 48);
@@ -239,7 +246,7 @@ namespace calculator {
 			this->button_mult->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_mult->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_mult->Location = System::Drawing::Point(339, 180);
+			this->button_mult->Location = System::Drawing::Point(339, 192);
 			this->button_mult->Margin = System::Windows::Forms::Padding(4);
 			this->button_mult->Name = L"button_mult";
 			this->button_mult->Size = System::Drawing::Size(48, 48);
@@ -254,7 +261,7 @@ namespace calculator {
 			this->button_num_2->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_num_2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_num_2->Location = System::Drawing::Point(103, 123);
+			this->button_num_2->Location = System::Drawing::Point(103, 136);
 			this->button_num_2->Margin = System::Windows::Forms::Padding(4);
 			this->button_num_2->Name = L"button_num_2";
 			this->button_num_2->Size = System::Drawing::Size(82, 62);
@@ -270,7 +277,7 @@ namespace calculator {
 			this->button_num_3->FlatAppearance->BorderColor = System::Drawing::Color::Black;
 			this->button_num_3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_num_3->Location = System::Drawing::Point(193, 123);
+			this->button_num_3->Location = System::Drawing::Point(193, 136);
 			this->button_num_3->Margin = System::Windows::Forms::Padding(4);
 			this->button_num_3->Name = L"button_num_3";
 			this->button_num_3->Size = System::Drawing::Size(82, 62);
@@ -285,7 +292,7 @@ namespace calculator {
 			this->button_num_4->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_num_4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_num_4->Location = System::Drawing::Point(13, 193);
+			this->button_num_4->Location = System::Drawing::Point(13, 206);
 			this->button_num_4->Margin = System::Windows::Forms::Padding(4);
 			this->button_num_4->Name = L"button_num_4";
 			this->button_num_4->Size = System::Drawing::Size(82, 62);
@@ -300,7 +307,7 @@ namespace calculator {
 			this->button_num_5->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_num_5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_num_5->Location = System::Drawing::Point(103, 193);
+			this->button_num_5->Location = System::Drawing::Point(103, 206);
 			this->button_num_5->Margin = System::Windows::Forms::Padding(4);
 			this->button_num_5->Name = L"button_num_5";
 			this->button_num_5->Size = System::Drawing::Size(82, 62);
@@ -315,7 +322,7 @@ namespace calculator {
 			this->button_num_6->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_num_6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_num_6->Location = System::Drawing::Point(193, 193);
+			this->button_num_6->Location = System::Drawing::Point(193, 206);
 			this->button_num_6->Margin = System::Windows::Forms::Padding(4);
 			this->button_num_6->Name = L"button_num_6";
 			this->button_num_6->Size = System::Drawing::Size(82, 62);
@@ -330,7 +337,7 @@ namespace calculator {
 			this->button_num_9->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_num_9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_num_9->Location = System::Drawing::Point(193, 263);
+			this->button_num_9->Location = System::Drawing::Point(193, 276);
 			this->button_num_9->Margin = System::Windows::Forms::Padding(4);
 			this->button_num_9->Name = L"button_num_9";
 			this->button_num_9->Size = System::Drawing::Size(82, 62);
@@ -345,7 +352,7 @@ namespace calculator {
 			this->button_num_8->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_num_8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_num_8->Location = System::Drawing::Point(103, 263);
+			this->button_num_8->Location = System::Drawing::Point(103, 276);
 			this->button_num_8->Margin = System::Windows::Forms::Padding(4);
 			this->button_num_8->Name = L"button_num_8";
 			this->button_num_8->Size = System::Drawing::Size(82, 62);
@@ -360,7 +367,7 @@ namespace calculator {
 			this->button_num_7->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_num_7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_num_7->Location = System::Drawing::Point(13, 263);
+			this->button_num_7->Location = System::Drawing::Point(13, 276);
 			this->button_num_7->Margin = System::Windows::Forms::Padding(4);
 			this->button_num_7->Name = L"button_num_7";
 			this->button_num_7->Size = System::Drawing::Size(82, 62);
@@ -375,7 +382,7 @@ namespace calculator {
 			this->button_clear->BackColor = System::Drawing::SystemColors::ControlDark;
 			this->button_clear->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button_clear->Location = System::Drawing::Point(283, 43);
+			this->button_clear->Location = System::Drawing::Point(283, 25);
 			this->button_clear->Margin = System::Windows::Forms::Padding(4);
 			this->button_clear->Name = L"button_clear";
 			this->button_clear->Size = System::Drawing::Size(104, 55);
@@ -385,12 +392,44 @@ namespace calculator {
 			this->button_clear->UseVisualStyleBackColor = false;
 			this->button_clear->Click += gcnew System::EventHandler(this, &MyForm::button_clear_Click);
 			// 
+			// button_ponto
+			// 
+			this->button_ponto->BackColor = System::Drawing::SystemColors::ControlDark;
+			this->button_ponto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button_ponto->Location = System::Drawing::Point(207, 346);
+			this->button_ponto->Margin = System::Windows::Forms::Padding(4);
+			this->button_ponto->Name = L"button_ponto";
+			this->button_ponto->Size = System::Drawing::Size(65, 50);
+			this->button_ponto->TabIndex = 36;
+			this->button_ponto->Text = L",";
+			this->button_ponto->UseCompatibleTextRendering = true;
+			this->button_ponto->UseVisualStyleBackColor = false;
+			this->button_ponto->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_1);
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::SystemColors::ControlDark;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(296, 88);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(74, 42);
+			this->button1->TabIndex = 37;
+			this->button1->Text = L"‚Üê";
+			this->button1->UseCompatibleTextRendering = true;
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_2);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveBorder;
-			this->ClientSize = System::Drawing::Size(396, 389);
+			this->ClientSize = System::Drawing::Size(393, 402);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->button_ponto);
 			this->Controls->Add(this->button_clear);
 			this->Controls->Add(this->button_num_9);
 			this->Controls->Add(this->button_num_8);
@@ -496,33 +535,62 @@ private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ 
 	if (this->label_resultado->Text == "") {
 		return;
 	}
+
 	this->num2 = Convert::ToDouble(this->label_resultado->Text);
 	if (this->num2 == 0 && this->operacao == 3) {
 		this->label_resultado->Text = "";
 		this->num1 = 0;
 		return;
 	}
-	if (this->operacao == 1) {
+
+	switch (this->operacao) {
+	case 1:
 		this->resultado = this->num1 + this->num2;
-	}
-	else if (this->operacao == 2) {
+		break;
+	case 2:
 		this->resultado = this->num1 - this->num2;
-	}
-	else if (this->operacao == 3) {
+		break;
+	case 3:
 		this->resultado = this->num1 / this->num2;
-	}
-	else if (this->operacao == 4) {
+		break;
+	case 4:
 		this->resultado = this->num1 * this->num2;
+		break;
+	default:
+		break;
 	}
+
+
 	this->num1 = 0;
 	this->num2 = 0;
+	this->operacao = 0;
 	this->label_resultado->Text = Convert::ToString(this->resultado);
 }
 private: System::Void button_clear_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->num1 = 0;
+	this->num2 = 0;
 	this->label_resultado->Text = "";
 }
 private: System::Void backgroundWorker1_DoWork(System::Object^ sender, System::ComponentModel::DoWorkEventArgs^ e) {
 }
 
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	if (this->label_resultado->AccessibilityObject->Value == "") {
+		this->label_resultado->Text += "0,";
+	}
+	else if (this->label_resultado->Text->Contains(",") == false) {
+		if (this->label_resultado->Text == "") {
+			this->label_resultado->Text += "0,";
+		}
+		else {
+			this->label_resultado->Text += ",";
+		}
+	}
+}
+private: System::Void button1_Click_2(System::Object^ sender, System::EventArgs^ e) {
+	if (this->label_resultado->Text->Length > 0) {
+		this->label_resultado->Text = this->label_resultado->Text->Remove(this->label_resultado->Text->Length - 1);
+	}
+}
 };
 }

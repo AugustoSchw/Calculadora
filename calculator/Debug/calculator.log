@@ -1,8 +1,8 @@
 ﻿  MyForm.cpp
-C:\Users\augus\source\repos\calculator\calculator\MyForm.h(467,32): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-C:\Users\augus\source\repos\calculator\calculator\MyForm.h(475,32): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-C:\Users\augus\source\repos\calculator\calculator\MyForm.h(483,32): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-C:\Users\augus\source\repos\calculator\calculator\MyForm.h(491,32): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
-C:\Users\augus\source\repos\calculator\calculator\MyForm.h(499,32): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+C:\Users\augus\source\repos\calculator\calculator\MyForm.h(506,32): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+C:\Users\augus\source\repos\calculator\calculator\MyForm.h(514,32): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+C:\Users\augus\source\repos\calculator\calculator\MyForm.h(522,32): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+C:\Users\augus\source\repos\calculator\calculator\MyForm.h(530,32): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+C:\Users\augus\source\repos\calculator\calculator\MyForm.h(539,32): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
   MyForm.obj : Módulo MSIL encontrado; vínculo incremental está desabilitado para MSIL; executando link completo
   calculator.vcxproj -> C:\Users\augus\source\repos\calculator\Debug\calculator.exe
